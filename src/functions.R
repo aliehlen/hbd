@@ -1,33 +1,6 @@
-TODO: add instructions
+TODO: I'm not important
 
-16-17 j: jjjjjjjjjjjjjjmjjj
-1-5 p: wpppdlpphppp
-3-7 q: mspqqqqq
-1-4 k: hkjk
-3-6 l: llbllldzf
-11-14 x: xxnxvxxxxlxxxkv
-4-7 k: zkkksmjmrzxftx
-2-4 l: lllwq
-7-11 q: tbqqmmvkrsz
-3-4 f: gwfs
-3-5 z: ztszz
-2-4 k: kkpzl
-1-2 k: kkwckkzwskgbdc
-5-7 x: mxxxdxf
-1-3 p: pppp
-6-8 c: rcqrmcqmpcc
-5-6 s: srgvwsc
-5-6 w: wwwwwww
-2-6 w: xwwzfwr
-1-8 z: djzzzcmz
-10-14 b: dbwbbbbbldtbbbrbbq
-5-15 v: wvzftvfvzkcvjdvvzcj
-4-5 j: lrjdmjj
-1-15 q: qqqqqqqqqqqqqqkqqq
-1-2 w: vwkw
-2-4 c: lccsfmkrnrldzbrc
-5-14 r: rcpghlsspmvwvzmpvl
-7-9 n: nnnnnnnnx
+p12(d) = [sum(q->length(f(Set.(q)...)),split.(split(d,"\n\n"))) for f in (∪,∩)]
 
 For now, here's a poem about aging by Jenny Joseph:
 

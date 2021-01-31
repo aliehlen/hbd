@@ -1,4 +1,4 @@
-TODO: add instructions
+Anything look familiar here? The answer you're looking for is the day you wrote this:
 
 For now, here's a poem about aging by Jenny Joseph:
 

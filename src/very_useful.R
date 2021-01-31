@@ -1,4 +1,5 @@
 # https://raw.githubusercontent.com/Rdatatable/data.table/master/R/groupingsets.R
+# data.table is a really wonderful library
 
 rollup = function(x, ...) {
   UseMethod("rollup")

@@ -1,38 +1,40 @@
 TODO: add instructions
 
-acc -7
-acc +2
-acc +20
-acc +14
-jmp +191
-acc +47
-nop +339
-acc +49
-jmp +104
-jmp +629
-jmp +374
-acc +24
-jmp +220
-nop +474
-acc +25
-jmp +340
-acc +16
-acc +3
-acc +41
-jmp +566
-jmp +296
-acc +15
-jmp +452
-acc +21
-jmp +129
-acc +10
-acc -8
-acc +39
-jmp +396
-acc +5
-acc -4
-acc +0
-jmp +496
+
+function f(data)
+    data = permutedims(reduce(hcat, collect.(split(data, '\n'))))
+    grid = zeros(Bool, size(data)...)
+    for i in 1:length(data)
+        grid[i] = data[i] == '#'
+    end
+    grid
+
+    pocket = Dict{NTuple{3, Int64}, Bool}()
+
+    for j in 1:size(grid, 2), i in 1:size(grid, 1)
+        pocket[(i, j, 1)] = grid[i, j]
+    end
+
+    cycle = 1
+    while true
+        cycle > 6 && break
+        seen = Set{NTuple{3, Int64}}()
+        tmp = Dict{NTuple{3, Int64}, Bool}()
+        for k in collect(keys(pocket)), n in NEIGHBORS1
+            xk, yk, zk = k
+            xn, yn, zn = n.I
+            push!(seen, (xk + xn, yk + yn, zk + zn))
+        end
+        for K in seen
+            tmp[K] = find_next_state1(pocket, K...)
+        end
+        for k in keys(tmp)
+            pocket[k] = tmp[k]
+        end
+        cycle += 1
+    end
+    count(values(pocket))
+end
 
 For now, here's a poem about aging by Jenny Joseph:
 

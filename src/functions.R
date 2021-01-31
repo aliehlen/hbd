@@ -1,6 +1,28 @@
 TODO: I'm not important
 
-p12(d) = [sum(q->length(f(Set.(q)...)),split.(split(d,"\n\n"))) for f in (∪,∩)]
+part1(data = readInput()) = nothing
+
+part2(data = readInput()) = nothing
+
+testInput() = """..##.......
+#...#...#..
+.#....#..#.
+..#.#...#.#
+.#...##..#.
+..#.##.....
+.#.#.#....#
+.#........#
+#.##...#...
+#...##....#
+.#..#...#.#"""
+
+function tree_map(data=testInput)
+    lines = split(strip(data), '\n')
+    width = length(lines[1])
+    map(lines) do line
+        [x == '.' ? 0 : 1 for x in line]
+    end
+end
 
 For now, here's a poem about aging by Jenny Joseph:
 

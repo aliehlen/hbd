@@ -1,5 +1,39 @@
 TODO: add instructions
 
+acc -7
+acc +2
+acc +20
+acc +14
+jmp +191
+acc +47
+nop +339
+acc +49
+jmp +104
+jmp +629
+jmp +374
+acc +24
+jmp +220
+nop +474
+acc +25
+jmp +340
+acc +16
+acc +3
+acc +41
+jmp +566
+jmp +296
+acc +15
+jmp +452
+acc +21
+jmp +129
+acc +10
+acc -8
+acc +39
+jmp +396
+acc +5
+acc -4
+acc +0
+jmp +496
+
 For now, here's a poem about aging by Jenny Joseph:
 
 When I am an old woman I shall wear purple

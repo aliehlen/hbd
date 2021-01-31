@@ -1,3 +1,5 @@
+# https://github.com/numpy/numpy/blob/master/numpy/linalg/linalg.py
+
 """Lite version of scipy.linalg.
 
 Notes

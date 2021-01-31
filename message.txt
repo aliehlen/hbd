@@ -126,3 +126,5 @@ What a world of solemn thought their monody compels!
       Of the bells, bells, bells, bells—
               Bells, bells, bells—
   To the moaning and the groaning of the bells.
+
+Now that that's done, here's what to do: take the diff between this commit and two commits ago. See if that gets you anything useful.

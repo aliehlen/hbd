@@ -1,40 +1,33 @@
 TODO: add instructions
 
-
-function f(data)
-    data = permutedims(reduce(hcat, collect.(split(data, '\n'))))
-    grid = zeros(Bool, size(data)...)
-    for i in 1:length(data)
-        grid[i] = data[i] == '#'
-    end
-    grid
-
-    pocket = Dict{NTuple{3, Int64}, Bool}()
-
-    for j in 1:size(grid, 2), i in 1:size(grid, 1)
-        pocket[(i, j, 1)] = grid[i, j]
-    end
-
-    cycle = 1
-    while true
-        cycle > 6 && break
-        seen = Set{NTuple{3, Int64}}()
-        tmp = Dict{NTuple{3, Int64}, Bool}()
-        for k in collect(keys(pocket)), n in NEIGHBORS1
-            xk, yk, zk = k
-            xn, yn, zn = n.I
-            push!(seen, (xk + xn, yk + yn, zk + zn))
-        end
-        for K in seen
-            tmp[K] = find_next_state1(pocket, K...)
-        end
-        for k in keys(tmp)
-            pocket[k] = tmp[k]
-        end
-        cycle += 1
-    end
-    count(values(pocket))
-end
+16-17 j: jjjjjjjjjjjjjjmjjj
+1-5 p: wpppdlpphppp
+3-7 q: mspqqqqq
+1-4 k: hkjk
+3-6 l: llbllldzf
+11-14 x: xxnxvxxxxlxxxkv
+4-7 k: zkkksmjmrzxftx
+2-4 l: lllwq
+7-11 q: tbqqmmvkrsz
+3-4 f: gwfs
+3-5 z: ztszz
+2-4 k: kkpzl
+1-2 k: kkwckkzwskgbdc
+5-7 x: mxxxdxf
+1-3 p: pppp
+6-8 c: rcqrmcqmpcc
+5-6 s: srgvwsc
+5-6 w: wwwwwww
+2-6 w: xwwzfwr
+1-8 z: djzzzcmz
+10-14 b: dbwbbbbbldtbbbrbbq
+5-15 v: wvzftvfvzkcvjdvvzcj
+4-5 j: lrjdmjj
+1-15 q: qqqqqqqqqqqqqqkqqq
+1-2 w: vwkw
+2-4 c: lccsfmkrnrldzbrc
+5-14 r: rcpghlsspmvwvzmpvl
+7-9 n: nnnnnnnnx
 
 For now, here's a poem about aging by Jenny Joseph:
 
